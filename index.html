@@ -3,6 +3,28 @@
    <script>
    var submitted=false;
  </script>
+ <script>
+  function loadStyleSheet(src){
+      if (document.createStyleSheet) document.createStyleSheet(src);
+      else {
+          var stylesheet = document.createElement('link');
+          stylesheet.href = src;
+          stylesheet.rel = 'stylesheet';
+          stylesheet.type = 'text/css';
+          document.getElementsByTagName('head')[0].appendChild(stylesheet);
+      }
+  }
+ </script>
+ <script>
+   loadStyleSheet("./plugins/bootstrap-4.3.1/css/bootstrap.min.css");
+   loadStyleSheet("./css/style.css");
+   loadStyleSheet("./css/settings.css");
+   loadStyleSheet("./fonts/fontawesome-5/css/all.min.css");
+   loadStyleSheet("./fonts/ep-icon-fonts/css/style.css");
+   loadStyleSheet("https://unpkg.com/aos@2.3.1/dist/aos.css");
+
+
+ </script>
  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="
          if(submitted) {
              $('#contact-form').html('<p class=\'text-center\'>Thanks! Your message has been sent. We will get back to you with a quote as soon as possible.</p>');
@@ -16,17 +38,17 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <!-- <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.css">
-      <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css">
-      <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css">
-      <link rel="stylesheet" href="./css/settings.css">
-      <link rel="stylesheet" href="./css/style.css">
+      <!-- <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css"> -->
+      <!-- <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css"> -->
+      <!-- <link rel="stylesheet" href="./css/settings.css"> -->
+      <!-- <link rel="stylesheet" href="./css/style.css"> -->
       <title>Poply - Sell your home quicker and for more money</title>
       <meta name="description" content="We help you stand out from the crowd, increase the value of your property and sell your house faster. We'll create a bespoke, professional website, dedicated to the listing of your property. We'll look after everything - beautiful imagery, design, copy-writing and hosting.">
    </head>
