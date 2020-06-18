@@ -3,7 +3,6 @@
    <script>
    var submitted=false;
  </script>
-
  <script>
   function loadStyleSheet(src){
       if (document.createStyleSheet) document.createStyleSheet(src);
@@ -25,7 +24,8 @@
    loadStyleSheet("./css/settings.css");
    loadStyleSheet("./css/style.css");
  </script>
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+ 
  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="
          if(submitted) {
              $('#contact-form').html('<p class=\'text-center\'>Thanks! Your message has been sent. We will get back to you with a quote as soon as possible.</p>');
@@ -40,6 +40,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
       <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+      
       
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -357,6 +358,18 @@
             </div>
          </div>
       </div>
-      <script src="./plugins/jquery/jquery.min.js"></script> <script src="./plugins/jquery/jquery-migrate.min.js"></script> <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script> <script src="./plugins/meanmenu/jquery.meanmenu.js"></script> <script src="./js/active.js"></script> <script>AOS.init(); </script>
+      <script src="./plugins/jquery/jquery.min.js"></script> <script src="./plugins/jquery/jquery-migrate.min.js"></script> <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script> <script src="./plugins/meanmenu/jquery.meanmenu.js"></script> <script src="./js/active.js"></script> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+      <script>
+      function animate() {
+         AOS.init();
+         console.log("yes");
+      }
+      window.onload = function() {
+          for (let i = 0; i < 10; i++) {
+              setTimeout(animate, 100 * i);
+          }
+      };
+      </script>
+
    </body>
 </html>
