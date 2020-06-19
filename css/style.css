@@ -1,3 +1,31 @@
+.strike {
+    position: relative;
+    display: inline-block;
+}
+.strike::before {
+    content: '';
+    border-bottom: 5px solid red;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+}
+
+#discount-banner p {
+  background: #338cd1;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 5px 15px;
+}
+
+#discount-banner p span {
+  font-size: 22px;
+  font-weight: bold;  
+}
+
 .brand-logo {
   width: 100px;
   /*padding-bottom: 5px;*/
@@ -45043,6 +45071,7 @@ label {
 ///////////////////////////////*/
 .hero-area {
   padding: 120px 0;
+  padding-top: 140px;
 }
 
 @media (min-width: 768px) {
